@@ -1,0 +1,773 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "medic bot",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "MedicalConditionSearch",
+                    "slots": [
+                        {
+                            "name": "Problem",
+                            "type": "Problem"
+                        },
+                        {
+                            "name": "Gender",
+                            "type": "Gender"
+                        },
+                        {
+                            "name": "Year",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "I am a {Gender} born in {Year}",
+                        "I have a {Problem}",
+                        "I am {Gender} born in {Year}",
+                        "I have been diagnosed with {Problem}",
+                        "i am diagnosed with {Problem}",
+                        "I am feeling {Problem}",
+                        "I am {Problem}",
+                        "{Gender} {Year}",
+                        "i am getting {Problem}",
+                        "getting {Problem}",
+                        "i keep {Problem}",
+                        "i am breaking out {Problem}",
+                        "my {Problem}",
+                        "{Problem} does not feel right",
+                        "{Problem} does not feel normal",
+                        "{Problem} ",
+                        "i am passing {Problem}",
+                        "i am not able to {Problem} properly",
+                        "i'm not able to {Problem}",
+                        "i have been {Problem}",
+                        "i can't {Problem}",
+                        "i am unable to {Problem}",
+                        "continuous {Problem}",
+                        "{Problem} continuously",
+                        "i can't stop {Problem}",
+                        "i have been {Problem} for a long time",
+                        "i have {Problem}",
+                        "i am experiencing {Problem}",
+                        "i am having {Problem}"
+                    ]
+                },
+                {
+                    "name": "YesIntent",
+                    "slots": [],
+                    "samples": [
+                        "yes of course",
+                        "yup",
+                        "yeah",
+                        "yes"
+                    ]
+                },
+                {
+                    "name": "NoIntent",
+                    "slots": [],
+                    "samples": [
+                        "nope",
+                        "that's alright thanks",
+                        "not at all",
+                        "nah",
+                        "no"
+                    ]
+                },
+                {
+                    "name": "ByeIntent",
+                    "slots": [],
+                    "samples": [
+                        "you are a lifesaver",
+                        "thanks a lot",
+                        "that's alright",
+                        "that's alright bye",
+                        "thanks bye",
+                        "stop",
+                        "bye"
+                    ]
+                },
+                {
+                    "name": "DirectTreatment",
+                    "slots": [
+                        {
+                            "name": "Problem",
+                            "type": "Problem"
+                        },
+                        {
+                            "name": "Gender",
+                            "type": "Gender"
+                        },
+                        {
+                            "name": "Year",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "I want to know treatment for {Problem}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "Problem",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Abdominal guarding",
+                                "synonyms": [
+                                    "abdomen feels tightened"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Abdominal pain",
+                                "synonyms": [
+                                    "abdomen is paining",
+                                    "pain in the abdomen"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Abdominal pain associated with menstruation",
+                                "synonyms": [
+                                    "abdomen is paining because of periods",
+                                    "pain in the abdomen due to periods",
+                                    "pain in the abdomen during periods",
+                                    "abdominal pain during periods",
+                                    "abdominal pain due to periods"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Absence of a pulse",
+                                "synonyms": [
+                                    "no pulse",
+                                    "can't find a pulse"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Aggressiveness",
+                                "synonyms": [
+                                    "aggressive",
+                                    "violent"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Agitation",
+                                "synonyms": [
+                                    "irritated",
+                                    "agitated",
+                                    "restless"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ankle deformity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ankle swelling",
+                                "synonyms": [
+                                    "swollen ankle"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Anxiety",
+                                "synonyms": [
+                                    "worried",
+                                    "anxious",
+                                    "worry"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Arm pain",
+                                "synonyms": [
+                                    "pain in the arm",
+                                    "pain in my arm",
+                                    "arm pains",
+                                    "arm is paining"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Arm swelling",
+                                "synonyms": [
+                                    "swollen arm",
+                                    "arm is swollen"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Back deformity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Back pain",
+                                "synonyms": [
+                                    "back pains",
+                                    "pain in my back",
+                                    "pain in the back",
+                                    "back is paining"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Black stools"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blackening of vision",
+                                "synonyms": [
+                                    "see black",
+                                    "black vision",
+                                    "can't see"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blackhead",
+                                "synonyms": [
+                                    "zit"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bleeding from vagina",
+                                "synonyms": [
+                                    "bleeding in vagina",
+                                    "vagina is bleeding"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bleeding in the conjunctiva of the eye",
+                                "synonyms": [
+                                    "eye is bleeding"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bloated feeling in the stomach",
+                                "synonyms": [
+                                    "stomach is swollen",
+                                    "stomach is bloated",
+                                    "stomach feels bloated"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blood in stool",
+                                "synonyms": [
+                                    "blood in poop"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bloody cough",
+                                "synonyms": [
+                                    "blood in cough",
+                                    "blood while coughing"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blue colored skin",
+                                "synonyms": [
+                                    "skin is bluish in colour",
+                                    "skin is turning blue",
+                                    "blue skin",
+                                    "skin is blue"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blue spot on skin",
+                                "synonyms": [
+                                    "bluish spot",
+                                    "blue spot"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blurred vision",
+                                "synonyms": [
+                                    "eyesight is hazy",
+                                    "hazy vision",
+                                    "vision is blurred",
+                                    "blurry vision"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bold area among hair on the head",
+                                "synonyms": [
+                                    "bald patches on the head",
+                                    "going bald in patches",
+                                    "bald patches"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bone fracture",
+                                "synonyms": [
+                                    "bone got fractured",
+                                    "bone is fractured",
+                                    "fracture in the bone"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Breathing-related pains",
+                                "synonyms": [
+                                    "breathing is painful",
+                                    "pain while breathing",
+                                    "breathe properly"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Brittleness of nails",
+                                "synonyms": [
+                                    "nails break easily",
+                                    "nails are breaking easily",
+                                    "nails are brittle"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bulging abdominal wall",
+                                "synonyms": [
+                                    "abdomen is swelling",
+                                    "abdomen is swollen ",
+                                    "abdomen feels swollen"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Burning eyes",
+                                "synonyms": [
+                                    "burning sensation in the eyes",
+                                    "eyes are burning"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Burning in the throat",
+                                "synonyms": [
+                                    "burning sensation in the throat",
+                                    "throat is burning"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Burning nose",
+                                "synonyms": [
+                                    "burning sensation in the nose",
+                                    "nose is burning"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Burning sensation when urinating",
+                                "synonyms": [
+                                    "burning sensation while urinating"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Changes in the nails"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cheek swelling",
+                                "synonyms": [
+                                    "swelling in the cheek",
+                                    "cheek feels swollen",
+                                    "cheek is swollen"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chest pain",
+                                "synonyms": [
+                                    "chest pains",
+                                    "pain in my chest",
+                                    "pain in the chest",
+                                    "chest is paining"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chest tightness",
+                                "synonyms": [
+                                    "feeling of tightness in the chest",
+                                    "tightness in the chest",
+                                    "chest feels tight"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chills"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Coarsening of the skin structure"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cold feet",
+                                "synonyms": [
+                                    "feet are feeling cold",
+                                    "feet feel cold",
+                                    "feet are cold"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cold hands",
+                                "synonyms": [
+                                    "hands are feeling cold",
+                                    "hands are cold"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cold sweats"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cough",
+                                "synonyms": [
+                                    "coughing"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cough with sputum",
+                                "synonyms": [
+                                    "coughing with phlegm"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cramps"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cravings"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Crusting"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Curvature of the spine",
+                                "synonyms": [
+                                    "spine feels curved"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dark urine",
+                                "synonyms": [
+                                    "urine is dark",
+                                    "urine is a dark colour",
+                                    "colour of urine is dark"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Decreased urine stream",
+                                "synonyms": [
+                                    "urinate properly",
+                                    "less urine"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Delayed start to urination",
+                                "synonyms": [
+                                    "have to wait before urinating",
+                                    "urinate immediately"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Diarrhea",
+                                "synonyms": [
+                                    "defecation",
+                                    "stop defecating",
+                                    "going to the bathroom",
+                                    "defecating",
+                                    "loose motion"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Difficult defecation",
+                                "synonyms": [
+                                    "defecate"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Difficulty in finding words",
+                                "synonyms": [
+                                    "can't think of words",
+                                    "lost for words"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Difficulty in speaking",
+                                "synonyms": [
+                                    "speak",
+                                    "speak properly"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Difficulty in swallowing",
+                                "synonyms": [
+                                    "swallow",
+                                    "swallow properly"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Difficulty to concentrate",
+                                "synonyms": [
+                                    "pay attention",
+                                    "concentrate",
+                                    "focus"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Difficulty to learn",
+                                "synonyms": [
+                                    "learn properly"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Difficulty with gait",
+                                "synonyms": [
+                                    "walk properly"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Discoloration of nails",
+                                "synonyms": [
+                                    "nails are discoloured",
+                                    "nails are getting discoloured "
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Disorientation regarding time or place",
+                                "synonyms": [
+                                    "losing track of time",
+                                    "can't keep track of time"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Distended abdomen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dizziness",
+                                "synonyms": [
+                                    "dizzy"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Double vision"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Double vision, acute-onset"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dribbling after urination"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Drooping eyelid"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Drowsiness"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dry eyes",
+                                "synonyms": [
+                                    "eyes are dry"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dry mouth",
+                                "synonyms": [
+                                    "mouth is feeling dry"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dry skin",
+                                "synonyms": [
+                                    "skin feels dry",
+                                    "skin is dry"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Earache",
+                                "synonyms": [
+                                    "pain in the ear",
+                                    "ear is aching"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Early satiety"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elbow pain"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Enlarged calf"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Eye blinking"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Eye pain"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Eye redness"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Eyelid swelling"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Eyelids sticking together"
+                            }
+                        },
+                        {
+               
